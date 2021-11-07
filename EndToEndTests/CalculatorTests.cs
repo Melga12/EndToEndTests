@@ -19,8 +19,8 @@ namespace EndToEndTests
 
             {
                 AppiumOptions appiumOptions = new AppiumOptions();
-                appiumOptions.AddAdditionalCapability("appId", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
-                appiumOptions.AddAdditionalCapability("app", @"E:\Testy\ApiumTestsProject\ApiumTestsProject\ApiumTestsProject\bin\Debug\ApiumTestsProject.exe");
+                
+                appiumOptions.AddAdditionalCapability("app", @"Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
                 appiumOptions.AddAdditionalCapability("deviceName", "WindowsPC");
                 DesktopSession = new WindowsDriver<WindowsElement>(new Uri(DriverUrl), appiumOptions);
             }

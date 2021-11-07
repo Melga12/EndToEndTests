@@ -39,7 +39,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[2]/button"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -64,7 +63,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[2]/button"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -89,7 +87,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[2]/button"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -114,7 +111,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[2]/button"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -139,7 +135,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[2]/button"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -157,20 +152,11 @@ namespace EndToEndTests
             var yourEmail = driver.FindElement(By.Id("field-03"));
             yourEmail.Clear();
             yourEmail.SendKeys("test@gmail.com");
-            //var checkbox1 = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[1]/fieldset[2]/div/div[1]/label"));
-            //checkbox1.Click();
             var checkbox2 = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[1]/fieldset[2]/div/div[2]/label"));
             checkbox2.Click();
             var button = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[2]/button"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
-        }
-
-        [TearDown]
-        public void CloseWindow()
-        {
-            driver.Close();
         }
 
         [Test]
@@ -190,12 +176,15 @@ namespace EndToEndTests
             yourEmail.SendKeys("test@gmail.com");
             var checkbox1 = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[1]/fieldset[2]/div/div[1]/label"));
             checkbox1.Click();
-            //var checkbox2 = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[1]/fieldset[2]/div/div[2]/label"));
-            //checkbox2.Click();
             var button = driver.FindElement(By.XPath("/html/body/div[1]/section/div/form/div[2]/button"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
+        }
+
+        [TearDown]
+        public void CloseWindow()
+        {
+            driver.Close();
         }
     }
 }

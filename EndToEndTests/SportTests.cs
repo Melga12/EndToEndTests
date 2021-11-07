@@ -15,6 +15,7 @@ namespace EndToEndTests
             driver.Url = "https://lamp.ii.us.edu.pl/~mtdyd/zawody/";
             Assert.IsTrue(driver.WindowHandles.Count == 1);
         }
+        #region Adult
         [Test]
         public void CheckAddToAdultToMinimumAge()
         {
@@ -54,7 +55,8 @@ namespace EndToEndTests
             var info = driver.FindElement(By.Id("returnSt"));
             Assert.IsTrue(info.Text.Contains("Dorosly"));
         }
-
+        #endregion
+        #region Senior
         [Test]
         public void CheckAddToSeniorToMinimumAge()
         {
@@ -96,7 +98,8 @@ namespace EndToEndTests
             var info = driver.FindElement(By.Id("returnSt"));
             Assert.IsTrue(info.Text.Contains("Blad danych"));
         }
-
+        #endregion
+        #region Junior
         [Test]
         public void CheckAddToJuniorToMinimumAge()
         {
@@ -272,7 +275,8 @@ namespace EndToEndTests
             var info = driver.FindElement(By.Id("returnSt"));
             Assert.IsTrue(info.Text.Contains("Blad danych"));
         }
-
+        #endregion
+        #region Colt
         [Test]
         public void CheckAddToColtToMinimumAge()
         {
@@ -449,7 +453,8 @@ namespace EndToEndTests
             var info = driver.FindElement(By.Id("returnSt"));
             Assert.IsTrue(info.Text.Contains("Blad danych"));
         }
-
+        #endregion
+        #region Pixie
         [Test]
         public void CheckAddToPixieToMinimumAge()
         {
@@ -626,7 +631,7 @@ namespace EndToEndTests
             var info = driver.FindElement(By.Id("returnSt"));
             Assert.IsTrue(info.Text.Contains("Blad danych"));
         }
-
+        #endregion
         [Test]
         public void CheckAddWithoutDateOfBirth()
         {

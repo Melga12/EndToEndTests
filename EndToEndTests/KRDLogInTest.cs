@@ -30,7 +30,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[2]/div[2]/div/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -45,7 +44,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[2]/div[2]/div/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -60,7 +58,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[2]/div[2]/div/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -75,7 +72,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[2]/div[2]/div/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -90,8 +86,8 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[2]/div[2]/div/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
+
         [Test]
         public void ChceckToLogInWhenACustomerForgetsHisPassword()
         {
@@ -112,7 +108,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[3]/div[2]/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -135,7 +130,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[3]/div[2]/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -158,7 +152,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[3]/div[1]/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -181,7 +174,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[3]/div[1]/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
         }
 
         [Test]
@@ -198,13 +190,6 @@ namespace EndToEndTests
             var button = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/form/div[3]/div[1]/span/span[2]"));
             button.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
-        }
-
-        [TearDown]
-        public void CloseWindow()
-        {
-            driver.Close();
         }
 
         [Test]
@@ -221,7 +206,12 @@ namespace EndToEndTests
             var button1 = driver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div/div/a"));
             button1.Click();
             Assert.Pass();
-            driver.SwitchTo().Alert().Accept();
+        }
+
+        [TearDown]
+        public void CloseWindow()
+        {
+            driver.Close();
         }
     }
 }
